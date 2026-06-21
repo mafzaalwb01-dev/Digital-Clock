@@ -4,36 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
-    <meta name="description" content="A beautiful digital clock with real-time display, date, and greeting message.">
+    <meta name="description" content="A beautiful premium digital clock with real-time display, date, and greeting message.">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Digital Clock</h1>
-    <div class="box">
-        <h2 class="b-heading"> &#x2600; Good Morning !</h2>
-        <p class="b-ND">AM</p>
-        <div class="b-time">
-            <!-- Time will be inserted by JS -->
-        </div>
-        <div class="b-HMS">
-            <h2 style="margin-left: 10px; color: #4DEEFF; text-shadow: 0 0 10px #4DEEFF, 0 0 25px #4DEEFF, 0 0 50px #4DEEFF; font-size: 23px;">Hours</h2>
-            <h2 style="color: #FF6BD6; text-shadow: 0 0 10px #FF6BD6, 0 0 25px #FF6BD6, 0 0 50px #FF6BD6; margin-right: 0px; font-size: 23px;">Minutes</h2>
-            <h2 style="color: #A78BFA; text-shadow: 0 0 10px #A78BFA, 0 0 25px #A78BFA, 0 0 50px #A78BFA; margin-right: 10px; font-size: 23px;">Seconds</h2>
-        </div>
-        <div class="b-main">
-            <div class="main-l">
-                <div><p class="date-text">📅 16 June 2026</p></div>
-                <p class="day-text" style="color: #8B5CF6; line-height: 5px;">Thursday</p>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <div class="container">
+        <h1 id="main-title">Digital Clock</h1>
+        <div class="box" id="clock-card">
+            <div class="box-inner">
+                <div class="greeting-row">
+                    <span class="greeting-icon" id="greeting-icon">☀️</span>
+                    <h2 class="b-heading" id="greeting-text">Good Morning!</h2>
+                </div>
+
+                <div class="badge-row">
+                    <span class="badge" id="period-badge">AM</span>
+                </div>
+
+                <div class="b-time" id="time-display">
+                    <span class="time-segment time-hours" id="hours">12</span>
+                    <span class="time-colon">:</span>
+                    <span class="time-segment time-minutes" id="minutes">00</span>
+                    <span class="time-colon">:</span>
+                    <span class="time-segment time-seconds" id="seconds">00</span>
+                </div>
+
+                <div class="b-HMS">
+                    <span class="label label-hours">Hours</span>
+                    <span class="label label-minutes">Minutes</span>
+                    <span class="label label-seconds">Seconds</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="b-main">
+                    <div class="main-l">
+                        <p class="date-text" id="date-text">📅 21 June 2026</p>
+                        <p class="day-text" id="day-text">Saturday</p>
+                    </div>
+                    <div class="main-r">
+                        <button class="btn" id="timezone-btn">
+                            <span class="btn-flag">🇵🇰</span>
+                            Pakistan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <span class="footer-text">✨ Make Today Amazing! ✨</span>
+                </div>
             </div>
-            <div class="main-r">
-                <button class="btn">Pakistan</button>
-            </div>
-        </div>
-        <div class="footer">
-            &#129293; Make Today Amazing ! &#129293;
         </div>
     </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>
